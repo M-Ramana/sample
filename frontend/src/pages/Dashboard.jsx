@@ -6,6 +6,7 @@ import {
   MdDashboard, MdUploadFile, MdAssignment, MdArticle,
   MdBarChart, MdPerson, MdCheckCircle, MdPending, MdArrowForward, MdTableChart
 } from 'react-icons/md';
+import carImage from '../assets/car.svg';
 
 const StatusBadge = ({ status }) => {
   const map = {
@@ -55,9 +56,10 @@ export default function Dashboard() {
         <div>
           <h1 className="page-title">
             <span style={{ color: 'var(--primary-light)' }}>👋 </span>
-            Welcome, {user?.name?.split(' ')[0] || 'Staff'}
+            how are you, {user?.name?.split(' ')[0] || 'Staff'}
           </h1>
           <p className="page-subtitle">Academic Audit Management — {user?.department || 'Department'}</p>
+          <img src={carImage} alt="Car" style={{ width: 80, height: 'auto', marginTop: 10 }} />
         </div>
         <div className="topbar-right">
           <span className="badge-pill">{user?.staffId || 'STF'}</span>
